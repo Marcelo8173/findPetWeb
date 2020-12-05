@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../../assets/Logo.svg';
 import {Container} from './styles';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
     return(
@@ -13,7 +14,7 @@ const Header: React.FC = () => {
                 </div>
             </div>
             <div className="bell" >
-                <button>Sino</button>
+                <Link to="/following">Sino</Link>
             </div>
         </Container>
     )
