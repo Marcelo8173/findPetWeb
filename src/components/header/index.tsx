@@ -15,7 +15,7 @@ const Header: React.FC = () => {
     return(
         <Container>
             <div className="logo-container">
-                <img src={Logo} alt="findPet" width="120px"/>
+                <img src={Logo} alt="findPet" width="100px"/>
                 <div>
                     <button onClick={handleDahsboard}>Pagina inicial</button>
                     <button>Hoje</button>

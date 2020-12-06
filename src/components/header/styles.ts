@@ -5,13 +5,13 @@ export const Container = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 40px;
+    margin: 35px;
 
     .logo-container{
         display: flex;
         align-items: center;
         img{
-            margin-right: 60px;
+            margin-right: 40px;
         }
         button{
             background:  #B9E0EB;
