@@ -27,11 +27,38 @@ export const Card = styled.div`
             .options{
                 display: flex;
                 justify-content: space-between; 
+                button{
+                    border:1px solid transparent;
+                    padding: 5px;
+                    margin: 5px;
+                    background: transparent;
+                    color: #FFFF;
+                    font-weight: 700;
+                    font-family: 'Roboto Slab';
+                    transition: all 0.2s;
+                    svg{
+                        color: rgb(255, 189, 29);
+                        font-size: 25px;
+                    }
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+                .datails{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        margin-left: 5px;
+                    }
+                }
             }
         }
         img{
             width: 100%;
             border-radius: 5px;
+            filter: brightness(80%);
+            z-index: -1;
         }
        
     }

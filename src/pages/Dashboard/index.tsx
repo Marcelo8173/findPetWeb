@@ -1,6 +1,9 @@
 import React from 'react';
 import HeaderComponet from '../../components/header';
 import {Container,Content,Card} from './styles';
+import {AiOutlineHeart} from 'react-icons/ai';
+import {FaCommentAlt} from 'react-icons/fa'
+import {CgDetailsMore} from 'react-icons/cg';
 
 const Dashboard: React.FC = () => {
     return(
@@ -14,14 +17,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -31,19 +37,22 @@ const Dashboard: React.FC = () => {
                     <Card>
                         <figure>
                         <section>
-                            <div className="options">
+                                <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
-                            </div>
+                                </div>
                             </section>
                             <img src="https://t2.ea.ltmcdn.com/pt/images/3/7/7/img_nomes_para_cachorros_labradores_20773_600_square.jpg" alt=""/>
                         </figure>
@@ -54,14 +63,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -74,14 +86,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -94,14 +109,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -114,14 +132,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -134,14 +155,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -154,14 +178,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -174,14 +201,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -194,14 +224,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -214,14 +247,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -234,14 +270,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -254,14 +293,17 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
                             </section>
@@ -274,17 +316,20 @@ const Dashboard: React.FC = () => {
                                 <div className="options">
                                     <div>
                                         <button>
-                                            like
+                                            <AiOutlineHeart />
                                         </button>
                                         <button>
-                                            comentarios
+                                            <FaCommentAlt />
                                         </button>
                                     </div>
                                     <div>
-                                        <button>ir</button>
+                                        <button className="datails">
+                                            Detalhes
+                                            <CgDetailsMore />
+                                        </button>
                                     </div>
                                 </div>
-                            </section>
+                            </section>  
                             <img src="https://exame.com/wp-content/uploads/2020/03/gettyimages-1212711501-e1585683360473.jpg" alt=""/>
                         </figure>
                     </Card>
