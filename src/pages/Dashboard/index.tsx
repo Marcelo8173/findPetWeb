@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import HeaderComponet from '../../components/header';
 import {Container,Content,Card} from './styles';
 import {AiOutlineHeart} from 'react-icons/ai';
 import {FaCommentAlt} from 'react-icons/fa'
 import {CgDetailsMore} from 'react-icons/cg';
+import { useHistory } from 'react-router-dom';
 
 const Dashboard: React.FC = () => {
+    const history = useHistory();
+
+    const handleGoToDatails = useCallback(() => {
+        history.push('/details')
+
+    },[history]);
+
     return(
         <Container>
             <HeaderComponet />
@@ -24,7 +32,7 @@ const Dashboard: React.FC = () => {
                                         </button>
                                     </div>
                                     <div>
-                                        <button className="datails">
+                                        <button onClick={handleGoToDatails} className="datails">
                                             Detalhes
                                             <CgDetailsMore />
                                         </button>
