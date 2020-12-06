@@ -27,6 +27,14 @@ export const Card = styled.div`
             .options{
                 display: flex;
                 justify-content: space-between; 
+                div{
+                    p{
+                        color: #FFFF;
+                        font-weight: 700;
+                        font-family: 'Roboto Slab';
+                        margin-left: 15px;
+                    }
+                }
                 button{
                     border:1px solid transparent;
                     padding: 5px;

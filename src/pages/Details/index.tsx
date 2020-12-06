@@ -6,7 +6,7 @@ const Details: React.FC = () => {
     return(
         <Container>
             <HeaderComponet />
-            <h1>Detalhes</h1>
+            <h1>Nino</h1>
         </Container>
     );
 }

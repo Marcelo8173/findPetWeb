@@ -30,6 +30,7 @@ const Dashboard: React.FC = () => {
                                         <button>
                                             <FaCommentAlt />
                                         </button>
+                                        <p>Nino</p>
                                     </div>
                                     <div>
                                         <button onClick={handleGoToDatails} className="datails">
@@ -53,6 +54,7 @@ const Dashboard: React.FC = () => {
                                         <button>
                                             <FaCommentAlt />
                                         </button>
+                                        <p>Alfredo</p>
                                     </div>
                                     <div>
                                         <button className="datails">
