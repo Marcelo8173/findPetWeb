@@ -23,7 +23,8 @@ const Header: React.FC = () => {
             </div>
             <div className="bell" >
                 <Link to="/following">
-                    <GiDogBowl size={40} color="#FFBD1D"/>
+                    Minha lista
+                    <GiDogBowl size={35} color="#FFBD1D"/>
                 </Link>
             </div>
         </Container>

@@ -6,6 +6,7 @@ const Dashboard: React.FC = () => {
     return(
         <Container>
             <HeaderComponet />
+            pagina princial
         </Container>
     )
 }

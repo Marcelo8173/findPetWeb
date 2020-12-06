@@ -6,6 +6,7 @@ const Following: React.FC = () => {
     return(
         <Container>
             <HeaderContainer />
+            carrinho
         </Container>
     );
 }

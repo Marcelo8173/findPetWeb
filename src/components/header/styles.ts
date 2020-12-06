@@ -32,6 +32,21 @@ export const Container = styled.header`
     }
     .bell{
         margin-right: 10px;
+        transition: all 0.2s;
+        &:hover{
+            opacity: 0.5;
+        }
+
+        a{
+            display: flex;
+            align-items:center;
+            text-decoration: none;
+            font-family: 'Roboto Slab';
+            color: #757575;
+            svg{
+                margin-left: 10px;
+            }
+        }
     }
     
 `;
