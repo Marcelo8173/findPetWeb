@@ -1,6 +1,8 @@
 import React from 'react';
 import HeaderComponet from '../../components/header';
 import {Container,ContentContainer} from './style';
+import {IoMdAddCircle} from 'react-icons/io';
+import {RiWhatsappFill} from 'react-icons/ri';
 
 const Details: React.FC = () => {
     return(
@@ -20,8 +22,14 @@ const Details: React.FC = () => {
                         doloremque, explicabo aperiam cumque voluptas vero unde aliquam 
                         numquam ea, illo quia quidem temporibus voluptate.</p>
                     <div className="buttons">
-                        <button>Adicionar a minha lista</button>
-                        <button>Entrar em contato</button>
+                        <button>
+                            <IoMdAddCircle size={20}/>
+                            Adicionar a minha lista
+                        </button>
+                        <button>
+                            <RiWhatsappFill size={20}/>
+                            Entrar em contato
+                            </button>
                     </div>
                 </aside>
             </ContentContainer>
