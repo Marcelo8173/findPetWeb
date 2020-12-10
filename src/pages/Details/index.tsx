@@ -4,6 +4,7 @@ import {Container,ContentContainer,ComentsContainer,ComentsContain} from './styl
 import {IoMdAddCircle} from 'react-icons/io';
 import {RiWhatsappFill} from 'react-icons/ri';
 import {GiTalk} from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 
 const Details: React.FC = () => {
     return(
@@ -50,11 +51,6 @@ const Details: React.FC = () => {
                     <p>Quantos anos?</p>
                 </section>
             </ComentsContain>
-            <footer>
-                <header>
-                    Deixe
-                </header>
-            </footer>
         </Container>
     );
 }
