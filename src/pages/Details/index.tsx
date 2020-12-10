@@ -4,7 +4,6 @@ import {Container,ContentContainer,ComentsContainer,ComentsContain} from './styl
 import {IoMdAddCircle} from 'react-icons/io';
 import {RiWhatsappFill} from 'react-icons/ri';
 import {GiTalk} from 'react-icons/gi';
-import { Link } from 'react-router-dom';
 
 const Details: React.FC = () => {
     return(
@@ -47,7 +46,7 @@ const Details: React.FC = () => {
                     <p>Que fofo</p>
                 </section>
                 <section>
-                    <img src="https://conteudo.imguol.com.br/c/entretenimento/38/2017/12/21/cena-de-avatar-2009-1513852401735_v2_450x600.jpg" alt=""/>
+                    <img src="https://avatars1.githubusercontent.com/u/50594445?s=88&u=16dac43ef18932d9fe3d30b7e19f76bb9c0d170c&v=4" alt=""/>
                     <p>Quantos anos?</p>
                 </section>
             </ComentsContain>

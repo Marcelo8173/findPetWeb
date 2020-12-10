@@ -95,5 +95,9 @@ export const ComentsContain = styled.div`
             border-radius: 50%;
             margin-right: 10px;
         }
+        p{
+            color: #6E6E6E;
+            font-weight: 520;
+        }
     }
 `;
