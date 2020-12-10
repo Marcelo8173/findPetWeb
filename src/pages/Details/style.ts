@@ -17,6 +17,7 @@ export const ContentContainer = styled.section`
     margin: 0 35px;
     img{
         max-width: 800px;
+        height: auto;
         border-radius: 10px;
     }
     aside{
@@ -74,6 +75,25 @@ export const ComentsContainer = styled.div`
             border: 1px solid transparent;
             width: 600px;
             color: #6E6E6E;
+        }
+    }
+`;
+
+export const ComentsContain = styled.div`
+    border: 1px solid transparent;
+    margin-bottom: 70px;
+    section{
+        display: flex;
+        align-items: center;
+        margin: 30px 35px;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        border-bottom: 3px solid #919191;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
         }
     }
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderComponet from '../../components/header';
-import {Container,ContentContainer,ComentsContainer} from './style';
+import {Container,ContentContainer,ComentsContainer,ComentsContain} from './style';
 import {IoMdAddCircle} from 'react-icons/io';
 import {RiWhatsappFill} from 'react-icons/ri';
 import {GiTalk} from 'react-icons/gi';
@@ -40,6 +40,21 @@ const Details: React.FC = () => {
                     <input placeholder="Deixe um comentário fofinho..." type="text"/>
                 </div>
             </ComentsContainer>
+            <ComentsContain>
+                <section>
+                    <img src="https://conteudo.imguol.com.br/c/entretenimento/38/2017/12/21/cena-de-avatar-2009-1513852401735_v2_450x600.jpg" alt=""/>
+                    <p>Que fofo</p>
+                </section>
+                <section>
+                    <img src="https://conteudo.imguol.com.br/c/entretenimento/38/2017/12/21/cena-de-avatar-2009-1513852401735_v2_450x600.jpg" alt=""/>
+                    <p>Quantos anos?</p>
+                </section>
+            </ComentsContain>
+            <footer>
+                <header>
+                    Deixe
+                </header>
+            </footer>
         </Container>
     );
 }
