@@ -56,3 +56,24 @@ export const ContentContainer = styled.section`
         }
     }
 `;
+
+export const ComentsContainer = styled.div`
+    margin: 25px 35px;
+    border: 1px solid #919191;
+    width: 600px;
+    padding: 12px;
+    border-radius: 5px;
+    div{
+        display: flex; 
+        align-items: center;
+        svg{
+            margin-right: 10px;
+            color: #6E6E6E;
+        }
+        input{
+            border: 1px solid transparent;
+            width: 600px;
+            color: #6E6E6E;
+        }
+    }
+`;

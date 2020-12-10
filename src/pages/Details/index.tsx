@@ -1,8 +1,9 @@
 import React from 'react';
 import HeaderComponet from '../../components/header';
-import {Container,ContentContainer} from './style';
+import {Container,ContentContainer,ComentsContainer} from './style';
 import {IoMdAddCircle} from 'react-icons/io';
 import {RiWhatsappFill} from 'react-icons/ri';
+import {GiTalk} from 'react-icons/gi';
 
 const Details: React.FC = () => {
     return(
@@ -33,6 +34,12 @@ const Details: React.FC = () => {
                     </div>
                 </aside>
             </ContentContainer>
+            <ComentsContainer>
+                <div>
+                    <GiTalk size={40}/> 
+                    <input placeholder="Deixe um comentário fofinho..." type="text"/>
+                </div>
+            </ComentsContainer>
         </Container>
     );
 }
