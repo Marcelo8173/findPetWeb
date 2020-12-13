@@ -1,9 +1,20 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
+const appearFromLeft = keyframes`
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+`
 export const Container = styled.div`
     height: 100vh;
     main{
         margin: 0 30px;
+        animation: ${appearFromLeft} 0.5s;
     }
 `;
 
