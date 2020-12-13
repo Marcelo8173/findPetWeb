@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { lighten } from 'polished';
+
+const appearFromLeft = keyframes`
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+`;
 
 export const Container = styled.div`
     width: 100%;
@@ -15,6 +26,8 @@ export const CardContainer = styled.div`
     display: flex;
     justify-content: center;
     margin: 5px 0 20px 0;
+    animation: ${appearFromLeft} 0.5s;
+
     div{
         display: flex;
         align-items: center;

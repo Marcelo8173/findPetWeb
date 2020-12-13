@@ -1,13 +1,26 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { lighten, shade } from 'polished';
+
+const appearFromLeft = keyframes`
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+`;
 
 export const Container = styled.div`
     height: 100vh;
-    h1{
-        margin: 45px 35px;
-        color: #454545;
-        font-weight: 700;
-    }
+        h1{
+            margin: 45px 35px;
+            color: #454545;
+            font-weight: 700;
+            animation: ${appearFromLeft} 0.5s;
+        }
+    
 `;
 
 
@@ -15,6 +28,7 @@ export const ContentContainer = styled.section`
     display: flex;
     justify-content: space-between;
     margin: 0 35px;
+    animation: ${appearFromLeft} 0.5s;
     img{
         max-width: 800px;
         height: auto;
@@ -64,6 +78,8 @@ export const ComentsContainer = styled.div`
     width: 600px;
     padding: 12px;
     border-radius: 5px;
+    animation: ${appearFromLeft} 0.5s;
+
     div{
         display: flex; 
         align-items: center;
@@ -82,6 +98,8 @@ export const ComentsContainer = styled.div`
 export const ComentsContain = styled.div`
     border: 1px solid transparent;
     margin-bottom: 70px;
+    animation: ${appearFromLeft} 0.5s;
+
     section{
         display: flex;
         align-items: center;
