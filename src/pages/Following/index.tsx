@@ -10,11 +10,11 @@ const Following: React.FC = () => {
             <CardContainer>
                 <div>
                     <img src="https://s2.glbimg.com/slaVZgTF5Nz8RWqGrHRJf0H1PMQ=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/U/e/NTegqdSe6SoBAoQDjKZA/cachorro.jpg" alt=""/>
-                    <p>Nome: Nino</p>
-                    <p>Disponivel para adoção</p>
+                    <p><span>Nome: </span>Nino</p>
+                    <p><span>Status: </span>Disponivel para adoção</p>
                     <section>
                         <button className="contact">Entrar em contato</button>
-                        <button>Remover dos favoritos</button>
+                        <button className="remove">Remover dos favoritos</button>
                     </section>
                 </div>
             </CardContainer>
