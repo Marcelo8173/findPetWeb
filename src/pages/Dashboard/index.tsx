@@ -62,14 +62,19 @@ const dataFakes = [
         name: "Mel",
         imageUrl: "https://exame.com/wp-content/uploads/2020/03/gettyimages-1212711501-e1585683360473.jpg",
     },
-]
+];
+
+interface IItems {
+    id: number;
+    name: string;
+    imageUrl: string;
+}
 
 const Dashboard: React.FC = () => {
     const history = useHistory();
 
-    const handleGoToDatails = useCallback(() => {
-        history.push('/details')
-
+    const handleGoToDatails = useCallback((item:IItems) => {
+        history.push(`/details/${item.id}`);
     },[history]);
 
     return(
@@ -92,7 +97,7 @@ const Dashboard: React.FC = () => {
                                             <p>{item.name}</p>
                                         </div>
                                         <div>
-                                            <button onClick={handleGoToDatails} className="datails">
+                                            <button onClick={() => handleGoToDatails(item)} className="datails">
                                                 Detalhes
                                                 <CgDetailsMore />
                                             </button>
