@@ -1,18 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import HeaderComponet from '../../components/header';
+import {useParams} from 'react-router-dom';
 import {Container,ContentContainer,ComentsContainer,ComentsContain} from './style';
 import {IoMdAddCircle} from 'react-icons/io';
 import {RiWhatsappFill} from 'react-icons/ri';
 import {GiTalk} from 'react-icons/gi';
+import api from '../../services/api';
+import { IItems } from '../Dashboard';
+
+interface IParams{
+    id?: string | undefined;
+}
 
 const Details: React.FC = () => {
-    
+    const params = useParams<IParams>();
+    const [items,setItems] = useState<IItems>({} as IItems);
+        
+    useEffect(() => {
+        api.get(`items/${params.id}`).then(response => {
+            setItems(response.data);
+        })
+    },[params.id]);
+
     return(
         <Container>
             <HeaderComponet />
-            <h1>Nino</h1>
+            <h1>{items.name}</h1>
             <ContentContainer>
-                <img src="https://s2.glbimg.com/slaVZgTF5Nz8RWqGrHRJf0H1PMQ=/0x0:800x450/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2019/U/e/NTegqdSe6SoBAoQDjKZA/cachorro.jpg" alt=""/>
+                <img src={items.imageUrl} alt={items.name}/>
                 <aside>
                     <h2>Descrição</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 

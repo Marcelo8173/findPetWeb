@@ -8,8 +8,8 @@ import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
 
-interface IItems {
-    id: number;
+export interface IItems {
+    id: string;
     name: string;
     imageUrl: string;
 }
