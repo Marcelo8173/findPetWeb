@@ -72,11 +72,10 @@ interface IItems {
 
 const Dashboard: React.FC = () => {
     const history = useHistory();
-
     const handleGoToDatails = useCallback((item:IItems) => {
         history.push(`/details/${item.id}`);
     },[history]);
-
+    
     return(
         <Container>
             <HeaderComponet />

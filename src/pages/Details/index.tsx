@@ -6,6 +6,7 @@ import {RiWhatsappFill} from 'react-icons/ri';
 import {GiTalk} from 'react-icons/gi';
 
 const Details: React.FC = () => {
+    
     return(
         <Container>
             <HeaderComponet />
