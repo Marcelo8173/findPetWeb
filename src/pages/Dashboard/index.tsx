@@ -32,6 +32,7 @@ const Dashboard: React.FC = () => {
         <Container>
             <HeaderComponet />
             <main>
+                {items.map(item => console.log(item))}
                 <Content>
                     {items.map(item => (
                         <Card key={item.id}>
