@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import HeaderComponet from '../../components/header';
 import {useParams} from 'react-router-dom';
-import {Container,ContentContainer,ComentsContainer,ComentsContain} from './style';
+import {Container,ContentContainer,ComentsContainer,ComentsContain,SkiilsContainer} from './style';
+import {GoVerified} from 'react-icons/go';
 import {IoMdAddCircle} from 'react-icons/io';
 import {RiWhatsappFill} from 'react-icons/ri';
 import {GiTalk} from 'react-icons/gi';
@@ -38,6 +39,14 @@ const Details: React.FC = () => {
                         Reiciendis mollitia enim iste ratione, voluptatibus alias 
                         doloremque, explicabo aperiam cumque voluptas vero unde aliquam 
                         numquam ea, illo quia quidem temporibus voluptate.</p>
+                    <SkiilsContainer>
+                        {items.skills?.map((item,index) => (
+                            <span key={index}>
+                                <GoVerified color="#36F048"/>
+                                {item.description}
+                            </span>
+                        ))}
+                    </SkiilsContainer>
                     <div className="buttons">
                         <button>
                             <IoMdAddCircle size={20}/>

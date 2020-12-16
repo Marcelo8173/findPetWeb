@@ -72,6 +72,20 @@ export const ContentContainer = styled.section`
     }
 `;
 
+export const SkiilsContainer = styled.div`
+    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: auto auto;
+    span{
+        margin-bottom: 5px;
+        color: #6E6E6E;
+        font-family: 'Roboto Slab';
+        svg{
+            margin-right: 5px;
+        }
+    }
+`;
+
 export const ComentsContainer = styled.div`
     margin: 25px 35px;
     border: 1px solid #919191;

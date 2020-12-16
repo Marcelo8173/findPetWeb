@@ -7,11 +7,16 @@ import {CgDetailsMore} from 'react-icons/cg';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 
+interface ISkills {
+    id: number,
+    description: string;
+}
 
 export interface IItems {
     id: string;
     name: string;
     imageUrl: string;
+    skills: ISkills[];
 }
 
 const Dashboard: React.FC = () => {
@@ -32,7 +37,6 @@ const Dashboard: React.FC = () => {
         <Container>
             <HeaderComponet />
             <main>
-                {items.map(item => console.log(item))}
                 <Content>
                     {items.map(item => (
                         <Card key={item.id}>
