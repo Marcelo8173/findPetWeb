@@ -105,6 +105,7 @@ export const ComentsContainer = styled.div`
             border: 1px solid transparent;
             width: 600px;
             color: #6E6E6E;
+            background: transparent;
         }
     }
 `;
