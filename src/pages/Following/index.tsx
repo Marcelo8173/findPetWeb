@@ -4,6 +4,7 @@ import {Container,CardContainer} from './styles';
 import { useFollow } from '../../hooks/Following';
 
 const Following: React.FC = () => {
+    const { removeToFollow } = useFollow();
     const {itemsAdd} = useFollow();
     return(
         <Container>
@@ -17,7 +18,7 @@ const Following: React.FC = () => {
                         <p><span>Status: </span>Disponivel para adoção</p>
                         <section>
                             <button className="contact">Entrar em contato</button>
-                            <button className="remove">Remover dos favoritos</button>
+                            <button onClick={() => removeToFollow(item)} className="remove">Remover dos favoritos</button>
                         </section>
                     </div>
                 </CardContainer>

@@ -50,7 +50,6 @@ export const Following: React.FC = ({children}) => {
         const itemsToRemove = arrayCart.filter(items => items.id !== item.id);
         localStorage.setItem('@findPet: item', JSON.stringify(itemsToRemove));
         setItemsAdd(itemsToRemove);
-       
     },[itemsAdd])
 
 
