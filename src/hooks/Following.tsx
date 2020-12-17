@@ -20,21 +20,27 @@ export const Following: React.FC = ({children}) => {
     },[])
 
     const addToFollow = useCallback((item:IItems) => {
-        const arrayOfPet = itemsAdd;
-        let equals = arrayOfPet.find(items => items.id === item.id);
-       
-        if(equals){
-            console.log('existe');
-            return;
+        try {
+            const arrayOfPet = itemsAdd;
+
+            let equals = arrayOfPet.find(items => items.id === item.id);
+           
+            if(equals){
+                console.log('existe');
+                return;
+            }
+            
+            arrayOfPet.push(item);
+    
+            setItemsAdd(arrayOfPet);
+    
+            localStorage.setItem('@findPet: item', JSON.stringify(arrayOfPet));
+    
+            return arrayOfPet;
+            
+        } catch (error) {
+            console.error(error)
         }
-        
-        arrayOfPet.push(item);
-
-        setItemsAdd(arrayOfPet);
-
-        localStorage.setItem('@findPet: item', JSON.stringify(item));
-
-        return arrayOfPet;
     },[itemsAdd]);
 
     return(
