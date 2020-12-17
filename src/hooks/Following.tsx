@@ -3,6 +3,7 @@ import { IItems } from '../pages/Dashboard';
 
 interface FollowContextData{
     addToFollow(item:IItems): void;
+    itemsAdd: IItems[];
 };
 
 const FollowingContext = createContext<FollowContextData>({} as FollowContextData);
@@ -44,7 +45,7 @@ export const Following: React.FC = ({children}) => {
     },[itemsAdd]);
 
     return(
-        <FollowingContext.Provider value={{addToFollow}}>
+        <FollowingContext.Provider value={{addToFollow,itemsAdd}}>
             {children}
         </FollowingContext.Provider>
     );
