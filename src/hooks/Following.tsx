@@ -3,6 +3,7 @@ import { IItems } from '../pages/Dashboard';
 
 interface FollowContextData{
     addToFollow(item:IItems): void;
+    removeToFollow(item:IItems): void;
     itemsAdd: IItems[];
 };
 
@@ -44,8 +45,17 @@ export const Following: React.FC = ({children}) => {
         }
     },[itemsAdd]);
 
+    const removeToFollow = useCallback((item:IItems) => {
+        const arrayCart = itemsAdd;
+        const itemsToRemove = arrayCart.filter(items => items.id !== item.id);
+        localStorage.setItem('@aurea: cart', JSON.stringify(itemsToRemove));
+        setItemsAdd(itemsToRemove);
+       
+    },[itemsAdd])
+
+
     return(
-        <FollowingContext.Provider value={{addToFollow,itemsAdd}}>
+        <FollowingContext.Provider value={{addToFollow,itemsAdd,removeToFollow}}>
             {children}
         </FollowingContext.Provider>
     );
