@@ -48,7 +48,7 @@ export const Following: React.FC = ({children}) => {
     const removeToFollow = useCallback((item:IItems) => {
         const arrayCart = itemsAdd;
         const itemsToRemove = arrayCart.filter(items => items.id !== item.id);
-        localStorage.setItem('@aurea: cart', JSON.stringify(itemsToRemove));
+        localStorage.setItem('@findPet: item', JSON.stringify(itemsToRemove));
         setItemsAdd(itemsToRemove);
        
     },[itemsAdd])
