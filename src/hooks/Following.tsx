@@ -6,12 +6,13 @@ interface FollowContextData{
 
 const FollowingContext = createContext<FollowContextData>({} as FollowContextData);
 
-const addToFollow = useCallback(() => {
-    console.log('aqui')
-},[])
 
 export const Following: React.FC = ({children}) => {
-    return(
+    const addToFollow = useCallback(() => {
+        console.log('aqui')
+    },[])
+    
+        return(
         <FollowingContext.Provider value={{addToFollow}}>
             {children}
         </FollowingContext.Provider>
