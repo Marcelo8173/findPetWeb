@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     const history = useHistory();
 
     const handleDahsboard = useCallback(() =>{
-        history.push('/');
+        history.push('/dashboard');
     },[history]);
 
     return(
