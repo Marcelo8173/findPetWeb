@@ -1,15 +1,16 @@
 import React, { useContext, createContext, useCallback } from 'react';
+import { IItems } from '../pages/Dashboard';
 
 interface FollowContextData{
-    addToFollow(): void;
+    addToFollow(item:IItems): void;
 };
 
 const FollowingContext = createContext<FollowContextData>({} as FollowContextData);
 
 
 export const Following: React.FC = ({children}) => {
-    const addToFollow = useCallback(() => {
-        console.log('aqui')
+    const addToFollow = useCallback((item:IItems) => {
+        console.log(item)
     },[])
     
         return(

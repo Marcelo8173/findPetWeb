@@ -6,6 +6,7 @@ import {FaCommentAlt} from 'react-icons/fa'
 import {CgDetailsMore} from 'react-icons/cg';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
+import { useFollow } from '../../hooks/Following';
 
 interface ISkills {
     id: number,
@@ -21,6 +22,7 @@ export interface IItems {
 
 const Dashboard: React.FC = () => {
     const history = useHistory();
+    const { addToFollow } = useFollow();
     const [items,setItems] = useState<IItems[]>([]);
 
     useEffect(() => {
@@ -44,7 +46,7 @@ const Dashboard: React.FC = () => {
                                 <section>
                                     <div className="options">
                                         <div>
-                                            <button>
+                                            <button onClick={() => addToFollow(item)} > 
                                                 <AiOutlineHeart />
                                             </button>
                                             <button>
