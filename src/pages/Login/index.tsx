@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import boyandcat from '../../assets/boyandcat.png'
 import Logo from '../../assets/Logo.svg';
-import {Container,WhyAdopt} from './styles';
+import {Container,WhyAdopt,AsideContainer} from './styles';
+import { useHistory } from 'react-router-dom';
 
 const Login: React.FC = () => {
+    const history = useHistory();
+    const handleToLogin = useCallback(() => {
+        history.push('/dashboard');
+    },[history])
+
     return(
         <Container>
             <div>
@@ -15,10 +21,14 @@ const Login: React.FC = () => {
                     <button>Saiba mais</button>
                 </WhyAdopt>
             </div>
-            <aside>
-                <img src={Logo} alt=""/>
-
-            </aside>
+            <AsideContainer>
+                <div>
+                    <img src={Logo} alt=""/>
+                    <input type="text"/>
+                    <input type="text"/>
+                    <button onClick={handleToLogin}>Entrar</button>
+                </div>
+            </AsideContainer>
         </Container>
     )
 }

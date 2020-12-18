@@ -5,10 +5,6 @@ export const Container = styled.div`
     background: #E4E0EB;
     display: flex;
     justify-content: space-between;
-    div{
-        
-    }
-
 `;
 
 export const WhyAdopt = styled.div`
@@ -16,7 +12,7 @@ export const WhyAdopt = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 180px;
+    margin: 160px;
     h1{
         color: #454545;
         font-weight: 700;
@@ -55,5 +51,13 @@ export const WhyAdopt = styled.div`
             border: 2px solid #ffbd1d;
             width: 220px;
         }
+    }
+`;
+
+export const AsideContainer = styled.aside`
+    margin: 180px;
+    div{
+        display: flex;
+        flex-direction: column;
     }
 `;
