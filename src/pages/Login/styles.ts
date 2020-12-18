@@ -50,6 +50,10 @@ export const WhyAdopt = styled.div`
         font-family: 'Roboto Slab';
         font-weight: 550;
         font-size: 16px;
-
+        transition: all 0.2s;
+        &:hover{
+            border: 2px solid #ffbd1d;
+            width: 220px;
+        }
     }
 `;
