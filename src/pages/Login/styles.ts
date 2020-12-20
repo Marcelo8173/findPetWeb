@@ -1,63 +1,102 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import Dog from '../../assets/gettyimages-1041987488.jpg';
+import { shade } from 'polished';
 
 export const Container = styled.div`
     height: 100vh;
-    background: #E4E0EB;
     display: flex;
-    justify-content: space-between;
+    align-items: stretch;
+
 `;
 
-export const WhyAdopt = styled.div`
+export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 160px;
-    h1{
-        color: #454545;
-        font-weight: 700;
-        margin-bottom: 20px;
-        font-family: 'Roboto Slab';
+    width: 100%;
+    max-width: 700px;
+`;
+
+const appearFromLeft = keyframes`
+    from{
+        opacity: 0;
+        transform: translateX(-50px);
     }
-    h2{
-        color: #454545;
-        font-weight: 550;
-        margin-bottom: 20px;
-        font-family: 'Roboto Slab';
-    }
-    img{
-        width: 450px;
-        height: auto;
-        margin-bottom: 20px;
-    }
-    p{
-        margin-bottom: 5px;
-        font-family: 'Roboto Slab';
-        color: #454545;
-        font-size: 18px;
-    }
-    button{
-        margin-top: 20px;
-        padding: 15px;
-        border-radius: 5px;
-        width: 200px;
-        border: 1px solid #ffbd1d;
-        color: #454545;
-        font-family: 'Roboto Slab';
-        font-weight: 550;
-        font-size: 16px;
-        transition: all 0.2s;
-        &:hover{
-            border: 2px solid #ffbd1d;
-            width: 220px;
-        }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
     }
 `;
 
-export const AsideContainer = styled.aside`
-    margin: 180px;
-    div{
-        display: flex;
-        flex-direction: column;
+export const AnimationContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    animation: ${appearFromLeft} 1s;
+
+      form{
+        margin:  50px 0;
+        width: 340px;
+        text-align:center;
+
+        h1{
+            margin-bottom:24px;
+        }   
+
+        button{
+            background: #ff9000;
+            height: 56px;
+            border-radius: 10px;
+            border: 0;
+            padding: 0 16px;
+            color: #312e38;
+            width: 100%;
+            font-weight: 500;
+            margin-top: 16px;
+            transition: background 0.2s;
+
+           &:hover{
+             background: ${shade(0.2,'#ff9000')};
+           }
+        }
+
+        a{
+            color: #F4EDE8;
+            display: block;
+            margin-top: 24px;
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover{
+            color: ${shade(0.2, '#F4EDE8')};
+        }
+
     }
+}
+> a{
+    color: #ff9000;
+    display: block;
+    margin-top: 24px;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    &:hover{
+            color: ${shade(0.2, '#ff9000')};
+        }
+    svg{
+        margin-right: 16px;
+    }
+
+}
+`;
+
+export const Background = styled.div`
+    flex: 1;
+    background: url(${Dog}), no-repeat;
+    background-size: cover;
+    filter: brightness(77%);
 `;
