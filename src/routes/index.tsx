@@ -4,6 +4,7 @@ import Dashboard from '../pages/Dashboard/index';
 import Following from '../pages/Following';
 import Details from '../pages/Details/index';
 import Login from '../pages/Login';
+import Profile from '../pages/Profile';
 
 const Routes = () => {
     return(
@@ -13,6 +14,7 @@ const Routes = () => {
                 <Route path="/dashboard" exact component={Dashboard}/>
                 <Route path="/following" exact component={Following} />
                 <Route path="/details/:id" exact component={Details} />
+                <Route path="/profile" exact component={Profile} />
             </Switch>
         </BrowserRouter>
     )

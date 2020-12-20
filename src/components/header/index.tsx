@@ -27,7 +27,7 @@ const Header: React.FC = () => {
                     Minha lista
                     <GiDogBowl size={35} color="#FFBD1D"/>
                 </Link>
-                <Link to="/dashboard">
+                <Link to="/profile">
                     <FiUser size={30} color="#FFBD1D"/>
                 </Link>
                 <Link to="/">
