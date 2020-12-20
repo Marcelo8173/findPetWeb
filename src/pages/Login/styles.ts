@@ -64,11 +64,23 @@ export const AnimationContainer = styled.div<IButtons>`
         h1{
             margin: 24px 0;
             font-family: 'Roboto Slab';
+            color: #575757;
         }   
+
+        h2{
+            font-family: 'Roboto Slab';
+            color: #575757;
+        }
+
+        p{
+            margin: 23px 0;
+            font-family: 'Roboto Slab';
+            color: #575757;
+        }
 
         input{
             padding: 6px;
-            margin-bottom: 15px;
+            margin-bottom: 14px;
             width: 100%;
             border: 2px solid #878787;
             border-radius: 5px;

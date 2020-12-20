@@ -49,7 +49,14 @@ const Login: React.FC = () => {
                             {/* <Link to="/recuperar_senha">Esqueci minha senha</Link> */}
                         </>
                     ): (
-                        <div>Olá</div>
+                        <>
+                            <img src={Logo} alt="Logo GoBarber"/>
+                            <h1>Bem vindo a iniciativa findPet</h1>
+                            <h2>Acreditamos que amor não se compra</h2>
+                            {/* <img src={boyandcat} alt=""/> */}
+                            <p>Por que adotar é tudo de bom?</p>
+                            <button>Saiba mais</button>
+                        </>
                     )}
                 </AnimationContainer>
             </Content>
