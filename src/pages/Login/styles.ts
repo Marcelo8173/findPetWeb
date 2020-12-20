@@ -1,6 +1,11 @@
 import styled, {keyframes} from 'styled-components';
 import Dog from '../../assets/gettyimages-1041987488.jpg';
 import { shade } from 'polished';
+import { ITabs } from './index';
+
+interface IButtons {
+    select: ITabs;
+}
 
 export const Container = styled.div`
     height: 100vh;
@@ -29,7 +34,7 @@ const appearFromLeft = keyframes`
     }
 `;
 
-export const AnimationContainer = styled.div`
+export const AnimationContainer = styled.div<IButtons>`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,7 +52,6 @@ export const AnimationContainer = styled.div`
             border-radius: 10px 0 0 10px;
             & + button{
                 border-radius: 0 10px 10px 0;
-
             }
             &:hover{
                  background: ${shade(0.1,'#B9E0EB')};
