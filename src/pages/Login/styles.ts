@@ -48,6 +48,8 @@ export const AnimationContainer = styled.div`
             width: 100%;
             border: 2px solid #878787;
             border-radius: 5px;
+            font-family: 'Roboto Slab';
+            color: #525252;
         }
 
         button{

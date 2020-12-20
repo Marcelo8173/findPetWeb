@@ -18,8 +18,7 @@ const Login: React.FC = () => {
                         <input placeholder="E-mail" type="text"/>
                         <input placeholder="Senha" type="password"/>
                         <button onClick={handleToLogin}>Entrar</button>
-                        <Link to="/recuperar_senha">Esqueci minha senha</Link>
-                    
+                        {/* <Link to="/recuperar_senha">Esqueci minha senha</Link> */}
                 </AnimationContainer>
             </Content>
             <Background />
