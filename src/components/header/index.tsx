@@ -3,6 +3,7 @@ import Logo from '../../assets/Logo.svg';
 import {Container} from './styles';
 import { Link, useHistory } from 'react-router-dom';
 import {GiDogBowl} from 'react-icons/gi';
+import {FiLogOut,FiUser} from 'react-icons/fi';
 
 
 const Header: React.FC = () => {
@@ -25,6 +26,12 @@ const Header: React.FC = () => {
                 <Link to="/following">
                     Minha lista
                     <GiDogBowl size={35} color="#FFBD1D"/>
+                </Link>
+                <Link to="/dashboar">
+                    <FiUser size={30} color="#FFBD1D"/>
+                </Link>
+                <Link to="/">
+                    <FiLogOut size={30} color="#FFBD1D" />
                 </Link>
             </div>
         </Container>
