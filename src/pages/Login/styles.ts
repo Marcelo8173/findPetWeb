@@ -48,10 +48,12 @@ export const AnimationContainer = styled.div<IButtons>`
         margin-bottom: 20px;
         button{
             background: #B9E0EB;
+            background: ${props => props.select.id === 2 ? shade(0.1,'#B9E0EB') : '#B9E0EB'};
             color: #757575;
             border-radius: 10px 0 0 10px;
             & + button{
                 border-radius: 0 10px 10px 0;
+                background: ${props => props.select.id === 1 ? shade(0.1,'#B9E0EB') : '#B9E0EB'};
             }
             &:hover{
                  background: ${shade(0.1,'#B9E0EB')};

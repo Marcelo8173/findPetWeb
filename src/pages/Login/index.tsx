@@ -11,7 +11,7 @@ export interface ITabs{
 
 const Login: React.FC = () => {
     const history = useHistory();
-    const [tabs, setTabs] = useState<ITabs>({id:1,type:'01'});
+    const [tabs, setTabs] = useState<ITabs>({id:2,type:'02'});
 
     const handleToLogin = useCallback(() => {
         history.push('/dashboard');
