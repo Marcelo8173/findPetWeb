@@ -37,6 +37,24 @@ export const AnimationContainer = styled.div`
     width: 70%;
     animation: ${appearFromLeft} 1s;
 
+    .button-container{
+        display: flex;
+        width: 50%;
+        margin-bottom: 20px;
+        button{
+            background: #B9E0EB;
+            color: #757575;
+            border-radius: 10px 0 0 10px;
+            & + button{
+                border-radius: 0 10px 10px 0;
+
+            }
+            &:hover{
+                 background: ${shade(0.1,'#B9E0EB')};
+            }
+        }
+    }
+
         h1{
             margin: 24px 0;
             font-family: 'Roboto Slab';

@@ -13,6 +13,10 @@ const Login: React.FC = () => {
         <Container>
             <Content>
                 <AnimationContainer>
+                    <div className="button-container">
+                        <button>Por quê adotar?</button>
+                        <button>Login</button>
+                    </div>
                     <img src={Logo} alt="Logo GoBarber"/>
                         <h1>Login</h1>
                         <input placeholder="E-mail" type="text"/>
