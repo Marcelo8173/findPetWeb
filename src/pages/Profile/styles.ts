@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const appearOpacity = keyframes`
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+`;
 
 export const Container = styled.div`
     height: 100vh; 
@@ -10,6 +19,7 @@ export const Background = styled.div`
     margin: 0 50px;
     max-height: 400px;
     overflow: hidden;
+    animation: ${appearOpacity} 1s;
     img{
         width: 100%;
         height: 100%;
@@ -23,6 +33,8 @@ export const HeaderProfile = styled.div`
     display: flex;
     margin-left: 150px;
     align-items: center;
+    animation: ${appearOpacity} 1s;
+
     section{
         label{
             cursor: pointer;
