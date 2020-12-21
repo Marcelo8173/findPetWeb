@@ -14,6 +14,10 @@ const Profile: React.FC = () => {
                 <div>
                     <h1>Eleanor Stward</h1>
                     <p>4 pets adotados</p>
+                    <div className="hashtag">
+                        <span>#cats</span>
+                        <span>#dogs</span>
+                    </div>
                 </div>
             </HeaderProfile>
         </Container>

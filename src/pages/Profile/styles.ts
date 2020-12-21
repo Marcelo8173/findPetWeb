@@ -40,5 +40,15 @@ export const HeaderProfile = styled.div`
             color: #575757;
             font-size: 18px;
         }
+        .hashtag{
+            margin-top: 12px;
+            span{
+                background: #B9E0EB;
+                margin-left: 5px;
+                color: #757575;
+                font-family: 'Roboto Slab';
+                padding: 5px 8px;
+            }
+        }
     }
 `;
