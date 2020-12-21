@@ -139,5 +139,4 @@ export const Background = styled.div`
     flex: 1;
     background: url(${Dog}), no-repeat;
     background-size: cover;
-    filter: brightness(77%);
 `;
