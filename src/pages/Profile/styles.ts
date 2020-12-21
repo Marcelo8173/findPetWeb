@@ -18,12 +18,15 @@ export const Background = styled.div`
 `;
 
 export const HeaderProfile = styled.div`
+    position: relative;
+    top: -50px;
     display: flex;
     margin-left: 150px;
     align-items: center;
     img{
         width: 250px;
         height: auto;
+        border: 6px solid #FFFF;
         border-radius: 50%;
         margin-right: 35px;
     }
