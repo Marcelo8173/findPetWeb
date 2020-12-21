@@ -23,12 +23,32 @@ export const HeaderProfile = styled.div`
     display: flex;
     margin-left: 150px;
     align-items: center;
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: 1px solid transparent;
+        .change-image{
+            position: absolute;
+            top: 80%;
+            left: 110px;
+            input{
+                display: none;
+            }
+        }
+    }
+
     img{
         width: 250px;
         height: auto;
         border: 6px solid #FFFF;
         border-radius: 50%;
         margin-right: 35px;
+        transition: all 0.2s;
+        &:hover{
+            filter: brightness(50%);
+        }
     }
     div{
         h1{
