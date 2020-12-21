@@ -23,18 +23,21 @@ export const HeaderProfile = styled.div`
     display: flex;
     margin-left: 150px;
     align-items: center;
-    button{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: transparent;
-        border: 1px solid transparent;
-        .change-image{
-            position: absolute;
-            top: 80%;
-            left: 110px;
-            input{
-                display: none;
+    section{
+        label{
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            border: 1px solid transparent;
+            .change-image{
+                position: absolute;
+                top: 80%;
+                left: 110px;
+                input{
+                    display: none;
+                }
             }
         }
     }
