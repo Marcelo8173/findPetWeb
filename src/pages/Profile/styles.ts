@@ -19,6 +19,8 @@ export const Background = styled.div`
     margin: 0 50px;
     max-height: 400px;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px -10px 38px -20px rgba(97,97,97,0.52);
     animation: ${appearOpacity} 1s;
     img{
         width: 100%;
