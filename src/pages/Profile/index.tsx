@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { Container,HeaderProfile,Background} from './styles';
 import {AiFillCamera} from 'react-icons/ai';
+import {FiEdit2} from 'react-icons/fi';
 import Header from '../../components/header';
 
 const Profile: React.FC = () => {
@@ -26,7 +27,12 @@ const Profile: React.FC = () => {
                     </label>       
                 </section>
                 <div>
-                    <h1>Eleanor Stward</h1>
+                    <section>
+                        <h1>Eleanor Stward</h1>
+                        <button>
+                            <FiEdit2 size={20} color="#6B6B6B"/>
+                            </button>
+                    </section>
                     <p>4 pets adotados</p>
                     <div className="hashtag">
                         <span>#cats</span>

@@ -68,9 +68,26 @@ export const HeaderProfile = styled.div`
         }
     }
     div{
-        h1{
-            font-family: 'Roboto Slab';
-            color: #575757;
+        section{
+            display: flex;
+            align-items: center;
+            h1{
+                font-family: 'Roboto Slab';
+                color: #575757;
+                font-weight: 550;
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                border: 1px solid transparent;
+                padding: 4px;
+                svg{
+                    transition: all 0.2s;
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
         }
         p{
             font-family: 'Roboto Slab';
