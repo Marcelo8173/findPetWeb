@@ -47,9 +47,10 @@ const Dashboard: React.FC = () => {
                         <AiOutlineClose />
                     </button>
                 </div>
+
                 <ModalContent>
                     <div>
-                        <input type="text" name="" id=""/>
+                        <input placeholder="Deixe aqui seu comentário" type="text" name="" id=""/>
                         <button>Enviar</button>
                     </div>
                 </ModalContent>

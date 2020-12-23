@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { shade } from 'polished';
 
 const appearFromLeft = keyframes`
     from{
@@ -91,6 +92,24 @@ export const ModalContent = styled.div`
     div{
         width: 100%;
         input{
+            margin: 0 0 30px 50px;
+            width: 70%;
+            margin-right: 15px;
+            padding: 10px;
+            border: 2px solid #757575;
+            border-radius: 5px;
+        }
+        button{
+            padding: 12px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            background: #B9E0EB;
+            color: #757575;
+            font-family: 'Roboto Slab';
+            transition: all 0.2s;
+            &:hover{
+                background: ${shade(0.1,'#B9E0EB')};
+            }
         }
     }
 `;

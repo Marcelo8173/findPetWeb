@@ -30,6 +30,11 @@ export const Content = styled.div`
         align-items: center;
         justify-content: space-between;
         margin: 25px 25px;
+        h1{
+            color: #454545;
+            font-weight: 700;
+            font-family: 'Roboto Slab';
+        }
         .close-modal{
             border: 1px solid transparent;
             background: transparent;
