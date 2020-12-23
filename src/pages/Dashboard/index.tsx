@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import HeaderComponet from '../../components/header';
-import {Container,Content,Card} from './styles';
 import {AiOutlineHeart,AiOutlineClose} from 'react-icons/ai';
 import {FaCommentAlt} from 'react-icons/fa'
 import {CgDetailsMore} from 'react-icons/cg';
@@ -8,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 import { useFollow } from '../../hooks/Following';
 import Modal from '../../components/modal';
+import {Container,Content,Card,ModalContent} from './styles';
 
 
 interface ISkills {
@@ -41,9 +41,18 @@ const Dashboard: React.FC = () => {
     return(
         <Container>
             <Modal isOpen={isOpenToSuspend}>
-                <button onClick={() => setIsOpenToSuspend(!isOpenToSuspend)}>
-                    <AiOutlineClose />
-                </button>
+                <div className="header-modal">
+                    <h1>Adicionar comentário</h1>
+                    <button className="close-modal" onClick={() => setIsOpenToSuspend(!isOpenToSuspend)}>
+                        <AiOutlineClose />
+                    </button>
+                </div>
+                <ModalContent>
+                    <div>
+                        <input type="text" name="" id=""/>
+                        <button>Enviar</button>
+                    </div>
+                </ModalContent>
             </Modal>
             <HeaderComponet />
             <main>

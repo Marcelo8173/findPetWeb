@@ -22,10 +22,22 @@ export const Content = styled.div`
     border-radius: 15px;
     margin: 0 450px;
     top: 50%;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    button{
-        align-self: flex-end;
-        margin: 10px 25px;
+    .header-modal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 25px 25px;
+        .close-modal{
+            border: 1px solid transparent;
+            background: transparent;
+            padding: 0;
+            svg{
+                font-size: 30px;
+                color: #757575;
+            }
+        }
     }
 `;
