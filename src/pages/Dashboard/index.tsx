@@ -1,13 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import HeaderComponet from '../../components/header';
 import {Container,Content,Card} from './styles';
-import {AiOutlineHeart} from 'react-icons/ai';
+import {AiOutlineHeart,AiOutlineClose} from 'react-icons/ai';
 import {FaCommentAlt} from 'react-icons/fa'
 import {CgDetailsMore} from 'react-icons/cg';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 import { useFollow } from '../../hooks/Following';
 import Modal from '../../components/modal';
+
 
 interface ISkills {
     id: number,
@@ -25,7 +26,7 @@ const Dashboard: React.FC = () => {
     const history = useHistory();
     const { addToFollow } = useFollow();
     const [items,setItems] = useState<IItems[]>([]);
-    const [openModal,setOpenModal] = useState(false);
+    const [isOpenToSuspend, setIsOpenToSuspend] = useState(false);
 
     useEffect(() => {
         api.get('items').then(response => {
@@ -37,13 +38,13 @@ const Dashboard: React.FC = () => {
         history.push(`/details/${item.id}`);
     },[history]);
 
-    const handleToOpenModal = useCallback(() => {
-        setOpenModal(props => !props);
-    },[])
-
     return(
         <Container>
-            <Modal openModal={openModal}/>
+            <Modal isOpen={isOpenToSuspend}>
+                <button onClick={() => setIsOpenToSuspend(!isOpenToSuspend)}>
+                    <AiOutlineClose />
+                </button>
+            </Modal>
             <HeaderComponet />
             <main>
                 <Content>
@@ -56,7 +57,7 @@ const Dashboard: React.FC = () => {
                                             <button onClick={() => addToFollow(item)} > 
                                                 <AiOutlineHeart />
                                             </button>
-                                            <button onClick={handleToOpenModal}>
+                                            <button onClick={() => setIsOpenToSuspend(!isOpenToSuspend)}>
                                                 <FaCommentAlt />
                                             </button>
                                             <p>{item.name}</p>

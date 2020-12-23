@@ -22,4 +22,10 @@ export const Content = styled.div`
     border-radius: 15px;
     margin: 0 450px;
     top: 50%;
+    display: flex;
+    flex-direction: column;
+    button{
+        align-self: flex-end;
+        margin: 10px 25px;
+    }
 `;
