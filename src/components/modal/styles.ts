@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+interface IModalProps{
+    openModal: boolean;
+}
+
+export const Container = styled.div<IModalProps>`
+    display: ${props => props.openModal === true ? 'initial': 'none'};
     padding: 0;
     margin: 0;
     top: 0;

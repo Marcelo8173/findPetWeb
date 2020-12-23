@@ -1,9 +1,13 @@
 import React from 'react';
 import {Container,Content} from './styles';
 
-const Modal: React.FC = ({children}) => {
+interface IModalProps{
+    openModal: boolean;
+}
+
+const Modal: React.FC<IModalProps> = ({children,openModal}) => {
     return(
-        <Container>
+        <Container openModal={openModal}>
             <Content>
                 {children}
             </Content>

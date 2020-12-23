@@ -7,6 +7,7 @@ import {CgDetailsMore} from 'react-icons/cg';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 import { useFollow } from '../../hooks/Following';
+import Modal from '../../components/modal';
 
 interface ISkills {
     id: number,
@@ -24,6 +25,7 @@ const Dashboard: React.FC = () => {
     const history = useHistory();
     const { addToFollow } = useFollow();
     const [items,setItems] = useState<IItems[]>([]);
+    const [openModal,setOpenModal] = useState(false);
 
     useEffect(() => {
         api.get('items').then(response => {
@@ -35,8 +37,13 @@ const Dashboard: React.FC = () => {
         history.push(`/details/${item.id}`);
     },[history]);
 
+    const handleToOpenModal = useCallback(() => {
+        setOpenModal(props => !props);
+    },[])
+
     return(
         <Container>
+            <Modal openModal={openModal}/>
             <HeaderComponet />
             <main>
                 <Content>
@@ -49,7 +56,7 @@ const Dashboard: React.FC = () => {
                                             <button onClick={() => addToFollow(item)} > 
                                                 <AiOutlineHeart />
                                             </button>
-                                            <button>
+                                            <button onClick={handleToOpenModal}>
                                                 <FaCommentAlt />
                                             </button>
                                             <p>{item.name}</p>
