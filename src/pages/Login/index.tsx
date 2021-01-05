@@ -1,7 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import Logo from '../../assets/Logo.svg';
 import {Container,Content,AnimationContainer,Background} from './styles';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 
 export interface ITabs{
@@ -46,7 +46,7 @@ const Login: React.FC = () => {
                             <input placeholder="E-mail" type="text"/>
                             <input placeholder="Senha" type="password"/>
                             <button onClick={handleToLogin}>Entrar</button>
-                            {/* <Link to="/recuperar_senha">Esqueci minha senha</Link> */}
+                            <Link to="/create-profile">Não possuo cadastro</Link>
                         </>
                     ): (
                         <>
