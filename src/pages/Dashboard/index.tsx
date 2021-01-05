@@ -1,13 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import HeaderComponet from '../../components/header';
-import {AiOutlineHeart,AiOutlineClose} from 'react-icons/ai';
+import {AiOutlineHeart} from 'react-icons/ai';
 import {FaCommentAlt} from 'react-icons/fa'
 import {CgDetailsMore} from 'react-icons/cg';
 import { useHistory } from 'react-router-dom';
 import api from '../../services/api';
 import { useFollow } from '../../hooks/Following';
-import Modal from '../../components/modal';
-import {Container,Content,Card,ModalContent} from './styles';
+// import Modal from '../../components/modal';
+// import {Container,Content,Card,ModalContent} from './styles';
+import {Container,Content,Card} from './styles';
 
 
 interface ISkills {
@@ -26,7 +27,7 @@ const Dashboard: React.FC = () => {
     const history = useHistory();
     const { addToFollow } = useFollow();
     const [items,setItems] = useState<IItems[]>([]);
-    const [isOpenToSuspend, setIsOpenToSuspend] = useState(false);
+    // const [isOpenToSuspend, setIsOpenToSuspend] = useState(false);
 
     useEffect(() => {
         api.get('items').then(response => {
@@ -40,7 +41,7 @@ const Dashboard: React.FC = () => {
 
     return(
         <Container>
-            <Modal isOpen={isOpenToSuspend}>
+            {/* <Modal isOpen={isOpenToSuspend}>
                 <div className="header-modal">
                     <h1>Adicionar comentário</h1>
                     <button className="close-modal" onClick={() => setIsOpenToSuspend(!isOpenToSuspend)}>
@@ -54,7 +55,7 @@ const Dashboard: React.FC = () => {
                         <button>Enviar</button>
                     </div>
                 </ModalContent>
-            </Modal>
+            </Modal> */}
             <HeaderComponet />
             <main>
                 <Content>
@@ -67,7 +68,10 @@ const Dashboard: React.FC = () => {
                                             <button onClick={() => addToFollow(item)} > 
                                                 <AiOutlineHeart />
                                             </button>
-                                            <button onClick={() => setIsOpenToSuspend(!isOpenToSuspend)}>
+                                            {/* <button onClick={() => setIsOpenToSuspend(!isOpenToSuspend)}>
+                                                <FaCommentAlt />
+                                            </button> */}
+                                            <button onClick={() => handleGoToDatails(item)}>
                                                 <FaCommentAlt />
                                             </button>
                                             <p>{item.name}</p>
