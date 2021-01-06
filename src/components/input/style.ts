@@ -17,7 +17,7 @@ export const Container = styled.div<ContainerProps>`
         color: #9C9C9C;
 
         & + div{
-            margin-top: 7px;
+            margin-top: 14px;
         }
 
     ${props => props.isFoucosed && css`

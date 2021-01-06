@@ -11,6 +11,8 @@ const NewUser:React.FC = () => {
                 <Input name="name" icon={FiUser} placeholder="Nome"/>
                 <Input name="email" icon={FiMail} placeholder="E-mail"/>
                 <Input name="password" type="password" icon={FiLock} placeholder="Senha"/>
+
+                <button>Cadastrar</button>
             </Content>
             <Background />
         </Container>

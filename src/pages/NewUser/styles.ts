@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
     height: 100vh;
@@ -13,6 +14,24 @@ export const Content = styled.div`
     justify-content: center;
     width: 100%;
     max-width: 750px;
+
+    button{
+        background: #ff9000;
+        height: 56px;
+        max-width: 600px;
+        border-radius: 5px;
+        border: 0;
+        padding: 0 16px;
+        color: #312e38;
+        width: 100%;
+        font-weight: 500;
+        transition: background 0.2s;
+        margin-top: 20px;
+
+           &:hover{
+             background: ${shade(0.2,'#ff9000')};
+           }
+        }
 `;
 
 
