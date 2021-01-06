@@ -35,12 +35,12 @@ const Input: React.FC<InputProps> = ({name, containerStyle={}, icon: Icon, ...re
         <Container style={containerStyle} isField={isField} isFoucosed={isFocus}>
             {Icon && <Icon size={20} />}
             <input
-            onFocus={handleInputFocus}
-            onBlur={handleInputBlur} 
-            ref={InputRef} {...rest}
+                onFocus={handleInputFocus}
+                onBlur={handleInputBlur} 
+                ref={InputRef} {...rest}
             />
 
-            <FiAlertCircle color='#c53030' size={20}/>
+            {/* <FiAlertCircle color='#c53030' size={20}/> */}
             
         </Container>
     )

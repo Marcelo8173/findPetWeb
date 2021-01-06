@@ -6,22 +6,23 @@ interface ContainerProps{
 }
 
 export const Container = styled.div<ContainerProps>`
-            background: #232129;
-            border-radius: 10px;
-            border: 2px solid #232129;
-            padding: 16px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            color: #666360;
+        background: #FFFF;
+        max-width: 600px;
+        border-radius: 5px;
+        border: 2px solid #9C9C9C;
+        padding: 16px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        color: #9C9C9C;
 
-            & + div{
-                margin-top: 7px;
-            }
+        & + div{
+            margin-top: 7px;
+        }
 
     ${props => props.isFoucosed && css`
-        color: #ff9000;
-        border-color: #ff9000;
+        color: rgb(255, 189, 29);
+        border-color: rgb(255, 189, 29);
     `};
 
     ${props => props.isField && css`
@@ -34,16 +35,15 @@ export const Container = styled.div<ContainerProps>`
             background: transparent;
             flex:1;
             border: 0;
-            color: #F4EDE8;
+            color: #9C9C9C;
 
 
 
             &::placeholder{
-                color: #666360;
+                color: #9C9C9C;
             }
 
         }
-
         svg{
             margin-right: 16px;
         }
