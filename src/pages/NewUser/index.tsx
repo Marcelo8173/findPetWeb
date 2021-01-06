@@ -5,6 +5,7 @@ import { Background } from '../Login/styles';
 import Input from '../../components/input';
 import { FiMail, FiUser, FiLock } from 'react-icons/fi';
 import {Form} from '@unform/web';
+import api from '../../services/api';
 
 
 interface IDatas{
@@ -20,9 +21,9 @@ const NewUser:React.FC = () => {
     const HandleSubmit = useCallback( async (data:IDatas) => {
         formRef.current?.setErrors({});
         try {
-            console.log(data)
+            await api.post("/users/create" ,data);
         } catch (error) {
-            
+            console.log(error);
         }
             
     },[]);
