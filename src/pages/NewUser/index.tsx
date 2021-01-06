@@ -19,8 +19,11 @@ const NewUser:React.FC = () => {
 
     const HandleSubmit = useCallback( async (data:IDatas) => {
         formRef.current?.setErrors({});
-
-        
+        try {
+            console.log(data)
+        } catch (error) {
+            
+        }
             
     },[]);
     return(

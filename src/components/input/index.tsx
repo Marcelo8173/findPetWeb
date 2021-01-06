@@ -1,7 +1,7 @@
-import React, {InputHTMLAttributes, useRef, useState, useCallback} from 'react';
+import React, {InputHTMLAttributes, useRef, useState, useCallback, useEffect} from 'react';
 import {Container} from './style';
 import {IconBaseProps} from 'react-icons';
-import {FiAlertCircle} from 'react-icons/fi';
+import {useField} from '@unform/core';
 
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
@@ -16,6 +16,7 @@ const Input: React.FC<InputProps> = ({name, containerStyle={}, icon: Icon, ...re
     const InputRef  = useRef<HTMLInputElement>(null);
     const [isFocus, setIsFocus] = useState(false);
     const [isField, setIsfield] = useState(false);
+    const {fieldName, registerField} = useField(name);
 
     const handleInputBlur = useCallback(() =>{
         setIsFocus(false);
@@ -30,14 +31,24 @@ const Input: React.FC<InputProps> = ({name, containerStyle={}, icon: Icon, ...re
     const handleInputFocus = useCallback(()=>{
         setIsFocus(true);
     }, []);
+
+    useEffect(()=>{
+        
+        registerField({
+            name: fieldName,
+            ref: InputRef.current,
+            path: 'value',
+        
+        })
+    }, [fieldName, registerField]);
     
     return(
         <Container style={containerStyle} isField={isField} isFoucosed={isFocus}>
             {Icon && <Icon size={20} />}
             <input
                 onFocus={handleInputFocus}
-                onBlur={handleInputBlur} 
-                ref={InputRef} {...rest}
+                onBlur={handleInputBlur}
+                ref={InputRef} {...rest} 
             />
 
             {/* <FiAlertCircle color='#c53030' size={20}/> */}
