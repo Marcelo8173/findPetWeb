@@ -14,7 +14,9 @@ export const Content = styled.div`
     justify-content: center;
     width: 100%;
     max-width: 750px;
-
+    form{
+        width: 80%;
+    }
     button{
         background: #ff9000;
         height: 56px;
