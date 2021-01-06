@@ -1,8 +1,15 @@
 import React from 'react';
+import {Container,Content} from './styles';
+import { Background } from '../Login/styles';
 
 const NewUser:React.FC = () => {
     return(
-        <div></div>
+        <Container>
+            <Content>
+                asdas
+            </Content>
+            <Background />
+        </Container>
     )
 }
 
